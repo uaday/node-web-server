@@ -43,6 +43,11 @@ app.get('/about',(req,resp)=>{
     pageTitle: 'About Page'
   })
 });
+app.get('/project',(req,res)=>{
+  res.render('project.hbs',{
+    pageTitle:'Project Place'
+  })
+});
 
 app.get('/contact',(req,resp)=>{
   resp.send('<h1>Contact Page</h1>')
