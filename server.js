@@ -15,6 +15,7 @@ hbs.registerHelper('upperCase',(txt)=>{
 app.use((req,res,next)=>{
   var log=new Date().toString();
   var logTxt=`${log}: ${req.method} ${req.url} \n`;
+  console.log(logTxt);
   fs.appendFile('server.log',logTxt,(error)=>{
     if(error){
       console.log(error);
